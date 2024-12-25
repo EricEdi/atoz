@@ -1,0 +1,32 @@
+/* profile.component.css */
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1s ease-out;
+  }
+  
+
+  /* profile.component.css */
+.card {
+    background-color: #f8f9fa; /* Custom light background */
+  }
+  
+  .card-title {
+    color: #ff0180; /* Custom green color for username */
+  }
+  
+  .card-text {
+    color: #7e8387; /* Custom gray color for email */
+  }
+  
+  .spinner-border {
+    border-color: #dc3545 !important; /* Custom red color for spinner */
+  }
+  

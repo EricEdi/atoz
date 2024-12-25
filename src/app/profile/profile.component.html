@@ -1,0 +1,23 @@
+<!-- profile.component.html -->
+<div class="container my-5">
+  <h2 class="text-center mb-4 text-primary">Profile</h2>
+
+  <div class="row">
+    <!-- Profile Card with Animation, taking up half width (6 columns) aligned to the left -->
+    <div *ngIf="user" class="col-lg-6 col-md-8 col-12">
+      <div class="card animate__animated animate__fadeIn bg-light">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.username }}</h5>
+          <p class="card-text text-secondary">Email: {{ user.email }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Animation -->
+  <div *ngIf="!user" class="d-flex justify-content-center align-items-center mt-5">
+    <div class="text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>

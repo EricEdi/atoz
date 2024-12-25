@@ -1,0 +1,30 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">A to Z</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Only show Login and Register if the user is NOT logged in -->
+        <li class="nav-item active" *ngIf="!authService.currentUserValue">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService.currentUserValue">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+        <!-- Show Profile and Logout if the user is logged in -->
+        <li class="nav-item" *ngIf="authService.currentUserValue">
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
+        </li>
+        <li class="navbar-nav ms-auto" *ngIf="authService.currentUserValue">
+          <a class="nav-link" (click)="authService.logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="mt-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
