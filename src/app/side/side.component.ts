@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-side',
   standalone: false,
   
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './side.component.html',
+  styleUrl: './side.component.css'
 })
-export class HomeComponent {
+export class SideComponent {
 constructor(public authService: AuthService) {}
 }
