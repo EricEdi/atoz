@@ -9,14 +9,18 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeComponent } from './home/home.component';  // Import FormsModule
+import { HomeComponent } from './home/home.component';
+import { SideComponent } from './side/side.component';
+import { FooterComponent } from './footer/footer.component';  // Import FormsModule
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    SideComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

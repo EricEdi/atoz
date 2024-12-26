@@ -1,13 +1,13 @@
 <!-- profile.component.html -->
-<div class="container my-5">
+<div class="container">
   <h2 class="text-center mb-4 text-primary">Profile</h2>
 
   <div class="row">
     <!-- Profile Card with Animation, taking up half width (6 columns) aligned to the left -->
-    <div *ngIf="user" class="col-lg-6 col-md-8 col-12">
+    <div *ngIf="user" class="col-12">
       <div class="card animate__animated animate__fadeIn bg-light">
         <div class="card-body">
-          <h5 class="card-title">{{ user.username }}</h5>
+          <h5 class="card-title">Hi {{ user.username }}</h5>
           <p class="card-text text-secondary">Email: {{ user.email }}</p>
         </div>
       </div>

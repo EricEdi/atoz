@@ -1,0 +1,87 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust for the height of the navbar */
+    margin-top: 60px; /* Space for the fixed navbar */
+  }
+  
+  /* Side Panel Styles */
+  .side-panel {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 60px; /* Offset to make room for the navbar */
+    left: 0;
+    bottom: 0;
+  }
+  
+  /* Home Panel Styles */
+  .home-panel {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px; /* Space for the side panel */
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensure the navbar is on top */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Make the layout responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto; /* Allow content to stack vertically */
+    }
+  
+    .side-panel {
+      position: static; /* Let side panel move with content on small screens */
+      width: 100%;
+      margin-top: 60px; /* Offset for navbar */
+    }
+  
+    .home-panel {
+      margin-left: 0;
+    }
+  
+    .navbar-container {
+      flex-direction: column;
+    }
+  }
+  
